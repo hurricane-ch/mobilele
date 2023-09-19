@@ -2,8 +2,8 @@ spring:
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/mobilele?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: niki
-    password: 123456
+    username: xxx
+    password: xxx
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
