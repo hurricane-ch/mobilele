@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class UserRegistrationController {
 
-    private final UserService service;
+    private final UserService userService;
 
     @GetMapping("/register")
     public String register() {
@@ -25,9 +25,10 @@ public class UserRegistrationController {
     @PostMapping("/register")
     public String register(UserRegistrationDTO userRegistrationDTO) {
 
-        service.registerUser(userRegistrationDTO);
+        // TODO Registration email with activation link
+
+        userService.registerUser(userRegistrationDTO);
 
         return "redirect:/";
     }
-
 }
