@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 @Table(name = "users")
 public class UserEntity extends BaseEntity {
 
-    @Column
+    @Column(unique = true)
     private String email;
     @Column
     private String password;
