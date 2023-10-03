@@ -12,7 +12,7 @@
 
 <div class="container">
     <h2 class="text-center text-white">Upload Offer</h2>
-    <form method="POST"
+    <form method="POST" 
           class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
         <div class="row">
 
@@ -69,13 +69,13 @@
             <div class="form-group col-md-6 mb-3">
                 <label class="text-center text-white font-weight-bold" for="transmission">Transmission</label>
                 <select
-                        id="transmission"
-                        name="transmission"
-                        class="form-control">
+                    id="transmission"
+                    name="transmission"
+                    class="form-control">
                     <option value="">- Select transmission type -</option>
-                    <option th:each="t : ${T(org.softuni.mobilele.enums.TransmissionEnum).values()}"
-                            th:text="${t}"
-                            th:value="${t}">
+                    <option th:each="t : ${T(org.softuni.mobilele.model.enums.TransmissionEnum).values()}"
+                        th:text="${t}"
+                        th:value="${t}">
                     </option>
                 </select>
                 <p class="errors alert alert-danger">

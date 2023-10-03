@@ -20,20 +20,7 @@ public class UserService {
 
     public void registerUser(
             UserRegistrationDTO userRegistrationDTO) {
-
         userRepository.save(map(userRegistrationDTO));
-    }
-
-    private UserEntity map(UserRegistrationDTO userRegistrationDTO) {
-        UserEntity userEntity = new UserEntity();
-
-        userEntity.setActive(true);
-        userEntity.setFirstName(userRegistrationDTO.firstName());
-        userEntity.setLastName(userRegistrationDTO.lastName());
-        userEntity.setEmail(userRegistrationDTO.email());
-        userEntity.setPassword(passwordEncoder.encode(userRegistrationDTO.password()));
-
-        return userEntity;
     }
 
     public boolean loginUser(UserLoginDTO userLoginDTO) {
@@ -61,10 +48,23 @@ public class UserService {
                 currentUser.logout();
             }
         }
+
         return loginSuccess;
     }
 
     public void logoutUser() {
         currentUser.logout();
+    }
+
+    private UserEntity map(UserRegistrationDTO userRegistrationDTO) {
+        UserEntity userEntity = new UserEntity();
+
+        userEntity.setActive(true);
+        userEntity.setFirstName(userRegistrationDTO.firstName());
+        userEntity.setLastName(userRegistrationDTO.lastName());
+        userEntity.setEmail(userRegistrationDTO.email());
+        userEntity.setPassword(passwordEncoder.encode(userRegistrationDTO.password()));
+
+        return userEntity;
     }
 }

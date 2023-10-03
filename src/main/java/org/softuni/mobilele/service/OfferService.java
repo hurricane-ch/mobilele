@@ -18,5 +18,4 @@ public class OfferService {
         //todo - create offer
         throw new UnsupportedOperationException("Coming soon!");
     }
-
 }

@@ -1,17 +1,9 @@
 package org.softuni.mobilele.util;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Component
+@Component("currentUser")
 @SessionScope
 public class CurrentUser {
 

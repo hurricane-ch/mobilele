@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/users")
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class UserLoginController {
 
     private final UserService userService;
 
-    @GetMapping("/users/login")
+    @GetMapping("/login")
     public String login() {
         return "auth-login";
     }
 
-    @GetMapping("/users/logout")
+    @GetMapping("/logout")
     public String logout() {
 
         userService.logoutUser();
@@ -28,7 +29,7 @@ public class UserLoginController {
         return "index";
     }
 
-    @PostMapping("/users/login")
+    @PostMapping("/login")
     public String login(UserLoginDTO userLoginDTO) {
         boolean loginSuccessful = userService.loginUser(userLoginDTO);
 

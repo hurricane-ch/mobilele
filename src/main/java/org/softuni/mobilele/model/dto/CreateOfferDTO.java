@@ -11,7 +11,5 @@ public record CreateOfferDTO(
         String imageUrl,
         Integer mileage,
         Integer price,
-        Integer year
-) {
-
+        Integer year) {
 }

@@ -73,7 +73,7 @@
                         name="transmission"
                         class="form-control">
                     <option value="">- Select transmission type -</option>
-                    <option th:each="t : ${T(org.softuni.mobilele.model.enums.TransmissionEnum).values()}"
+                    <option th:each="t : ${T(org.softuni.mobilele.enums.TransmissionEnum).values()}"
                             th:text="${t}"
                             th:value="${t}">
                     </option>
