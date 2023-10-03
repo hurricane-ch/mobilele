@@ -16,6 +16,7 @@ import java.util.TreeMap;
 @Service
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class BrandService {
+
     private final ModelRepository modelRepository;
 
     public List<BrandDTO> getAllBrands() {

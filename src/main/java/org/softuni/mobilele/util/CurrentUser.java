@@ -4,10 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Component
 @SessionScope
 public class CurrentUser {
