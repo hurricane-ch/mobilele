@@ -1,6 +1,6 @@
 package org.softuni.mobilele.enums;
 
-public enum Transmission {
+public enum TransmissionEnum {
     MANUAL,
-    AUTOMATIC;
+    AUTOMATIC;d
 }

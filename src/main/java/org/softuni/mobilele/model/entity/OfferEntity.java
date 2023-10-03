@@ -11,10 +11,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.softuni.mobilele.enums.EngineEnum;
-import org.softuni.mobilele.enums.Transmission;
+import org.softuni.mobilele.enums.TransmissionEnum;
 
 import java.math.BigDecimal;
 import java.sql.Types;
@@ -41,7 +40,7 @@ public class OfferEntity extends BaseEntity {
     private EngineEnum engine;
     @Enumerated(EnumType.STRING)
     @Column
-    private Transmission transmission;
+    private TransmissionEnum transmission;
     @Column
     private String imageUrl;
     @Column
