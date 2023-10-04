@@ -21,4 +21,5 @@ public class BrandEntity extends BaseEntity {
     @Column(nullable = false, unique = true)
     private String brand;
 
+
 }
