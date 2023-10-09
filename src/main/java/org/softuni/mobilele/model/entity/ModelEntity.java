@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import org.softuni.mobilele.enums.ModelCategoryEnum;
 
@@ -19,6 +20,7 @@ import org.softuni.mobilele.enums.ModelCategoryEnum;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(callSuper = true)
 @Table(name = "models")
 public class ModelEntity extends BaseEntity {
 
@@ -29,6 +31,5 @@ public class ModelEntity extends BaseEntity {
     private ModelCategoryEnum category;
     @ManyToOne
     private BrandEntity brand;
-
 
 }

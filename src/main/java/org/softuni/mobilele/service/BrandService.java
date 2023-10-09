@@ -23,8 +23,8 @@ public class BrandService {
 
         return brandRepository.findAll().stream()
                 .map(brand -> new BrandDTO(
-                        brand.getBrand(),
-                        modelRepository.findAllByBrandId(brand.getId()).stream()
+                        brand.getName(),
+                        brand.getModels().stream()
                                 .map(model -> new ModelDTO(model.getId(), model.getName()))
                                 .sorted(Comparator.comparing(ModelDTO::name))
                                 .collect(Collectors.toList())
