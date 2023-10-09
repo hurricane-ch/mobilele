@@ -5,14 +5,14 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
-import org.softuni.mobilele.enums.EngineEnum;
-import org.softuni.mobilele.enums.TransmissionEnum;
+import org.softuni.mobilele.model.enums.EngineEnum;
+import org.softuni.mobilele.model.enums.TransmissionEnum;
 import org.softuni.mobilele.model.validation.YearNotInTheFuture;
 
 public record CreateOfferDTO(@NotEmpty @Size(min = 5, max = 512) String description,
                              @Positive @NotNull Long modelId, @NotNull EngineEnum engine,
                              @NotNull TransmissionEnum transmission, @NotEmpty String imageUrl,
-                             @Positive @NotNull Long mileage,
+                             @Positive @NotNull Integer mileage,
                              @Positive @NotNull Integer price,
                              @YearNotInTheFuture(message = "The year should not be in the future!")
                              @NotNull(message = "Year must be provided!")

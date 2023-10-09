@@ -3,8 +3,7 @@ package org.softuni.mobilele.web;
 import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
-import org.softuni.mobilele.enums.EngineEnum;
+import org.softuni.mobilele.model.enums.EngineEnum;
 import org.softuni.mobilele.model.dto.CreateOfferDTO;
 import org.softuni.mobilele.service.BrandService;
 import org.softuni.mobilele.service.OfferService;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 

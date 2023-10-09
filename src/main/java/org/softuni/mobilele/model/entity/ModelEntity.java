@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import org.softuni.mobilele.enums.ModelCategoryEnum;
+import org.softuni.mobilele.model.enums.ModelCategoryEnum;
 
 @Entity
 @Getter

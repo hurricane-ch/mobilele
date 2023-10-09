@@ -33,17 +33,18 @@ public class OfferService {
     }
 
     private OfferEntity map(CreateOfferDTO createOfferDTO) {
-        OfferEntity offer = new OfferEntity();
+        OfferEntity newOffer = new OfferEntity();
 
-        offer.setUuid(UUID.randomUUID());
-        offer.setEngine(createOfferDTO.engine());
-        offer.setImageUrl(createOfferDTO.imageUrl());
-        offer.setMileage(createOfferDTO.mileage());
-        offer.setPrice(BigDecimal.valueOf(createOfferDTO.price()));
-        offer.setYear(createOfferDTO.year());
-        offer.setTransmission(createOfferDTO.transmission());
-        offer.setDescription(createOfferDTO.description());
+        newOffer.setUuid(UUID.randomUUID());
+        newOffer.setDescription(createOfferDTO.description());
+        newOffer.setEngine(createOfferDTO.engine());
+        newOffer.setTransmission(createOfferDTO.transmission());
+        newOffer.setImageUrl(createOfferDTO.imageUrl());
+        newOffer.setMileage(createOfferDTO.mileage());
+        newOffer.setPrice(BigDecimal.valueOf(createOfferDTO.price()));
+        newOffer.setYear(createOfferDTO.year());
 
-        return offer;
+        return newOffer;
+
     }
 }

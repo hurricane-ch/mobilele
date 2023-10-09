@@ -23,6 +23,7 @@
                 <label class="text-center text-white font-weight-bold" for="modelId">Model</label>
                 <select id="modelId"
                         th:name="modelId"
+                        th:field="*{modelId}"
                         th:errorclass="is-invalid"
                         class="form-control">
                     <option value="">- Select a model -</option>
@@ -34,14 +35,14 @@
                                 th:each="model : ${brand.models()}"
                                 th:text="${model.name}"
                                 th:value="${model.id}"
-                                th:selected="*{modelId} == ${model.id}">
+                                th:selected="${model.id} == model.id">
                             Model
                         </option>
 
                     </optgroup>
                 </select>
                 <p class="invalid-feedback errors alert alert-danger">
-                    Vechicle model is required.
+                    Vehicle model is required.
                 </p>
             </div>
             <!-- EO: model -->

@@ -16,8 +16,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcTypeCode;
-import org.softuni.mobilele.enums.EngineEnum;
-import org.softuni.mobilele.enums.TransmissionEnum;
+import org.softuni.mobilele.model.enums.EngineEnum;
+import org.softuni.mobilele.model.enums.TransmissionEnum;
 
 import java.math.BigDecimal;
 import java.sql.Types;
@@ -60,6 +60,4 @@ public class OfferEntity extends BaseEntity {
     @Column
     @Min(1950)
     private Integer year;
-
-
 }
