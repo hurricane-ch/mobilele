@@ -55,8 +55,6 @@ public class OfferController {
             rAtt.addFlashAttribute("org.springframework.validation.BindingResult.createOfferDTO", bindingResult);
             return "redirect:/offer/add";
         }
-
-
         UUID newOfferUUID = offerService.createOffer(createOfferDTO);
 
         return "redirect:/offer/" + newOfferUUID;
