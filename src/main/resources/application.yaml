@@ -19,3 +19,11 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+
+open.exchange.rates:
+  schema: https
+  host: openexchangerates.org
+  path: /api/latest.json
+  app_id: ${APP_ID:test}
+  symbols: EUR,BGN
+  enabled: false
