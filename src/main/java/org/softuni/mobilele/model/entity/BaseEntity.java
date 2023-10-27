@@ -21,8 +21,6 @@ import java.util.UUID;
 @AllArgsConstructor
 public class BaseEntity {
 
-//    proba 123
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

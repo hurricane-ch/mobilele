@@ -13,9 +13,6 @@ import lombok.experimental.SuperBuilder;
 @Entity
 @Getter
 @Setter
-@SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "users")
 public class UserEntity extends BaseEntity {
 
