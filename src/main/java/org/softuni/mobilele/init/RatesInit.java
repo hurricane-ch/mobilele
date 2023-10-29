@@ -18,7 +18,6 @@ public class RatesInit implements CommandLineRunner {
     private final OpenExchangeRateConfig openExchangeRateConfig;
     private final CurrencyService currencyService;
 
-    @Override
     public void run(String... args) throws Exception {
         if (openExchangeRateConfig.isEnabled()) {
             String openExchangeRateUrlTemplate =

@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
-@Configuration
-@ConfigurationProperties(prefix = "open.exchange.rates")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Configuration
+@ConfigurationProperties(prefix = "open.exchange.rates")
 public class OpenExchangeRateConfig {
 
     private String appId;

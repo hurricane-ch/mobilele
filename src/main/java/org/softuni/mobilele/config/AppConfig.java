@@ -13,11 +13,6 @@ import org.springframework.web.client.RestTemplate;
 public class AppConfig {
 
     @Bean
-    public PasswordEncoder passwordEncoder () {
-        return Pbkdf2PasswordEncoder.defaultsForSpringSecurity_v5_8();
-    }
-
-    @Bean
     public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
         return restTemplateBuilder
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
