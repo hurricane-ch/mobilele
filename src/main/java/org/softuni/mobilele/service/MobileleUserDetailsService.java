@@ -1,6 +1,5 @@
 package org.softuni.mobilele.service;
 
-import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import org.softuni.mobilele.model.entity.UserEntity;
 import org.softuni.mobilele.model.entity.UserRoleEntity;
@@ -11,8 +10,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
-
 
 @RequiredArgsConstructor
 public class MobileleUserDetailsService implements UserDetailsService {

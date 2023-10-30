@@ -1,9 +1,10 @@
 package org.softuni.mobilele.config;
 
-import lombok.Value;
+import lombok.RequiredArgsConstructor;
 import org.softuni.mobilele.model.enums.UserRoleEnum;
 import org.softuni.mobilele.repository.UserRepository;
 import org.softuni.mobilele.service.MobileleUserDetailsService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

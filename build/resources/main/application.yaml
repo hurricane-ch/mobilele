@@ -2,8 +2,8 @@ spring:
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/mobilele?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: ${DEFAULT_USER}
-    password: ${DEFAULT_ADMIN_PASS}
+    username: ${POSTGRE_USER}
+    password: ${POSTGRE_PASS}
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -20,10 +20,20 @@ spring:
       filter:
         enabled: true
 
+mobilele:
+  default.admin.pass: ${DEFAULT_ADMIN_PASS}
+  remember.me.key: ${REMEMBER_ME_KEY}
+
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+
 open.exchange.rates:
   schema: https
   host: openexchangerates.org
   path: /api/latest.json
   app_id: ${APP_ID:test}
   symbols: EUR,BGN
-  enabled: false
+  enabled: true

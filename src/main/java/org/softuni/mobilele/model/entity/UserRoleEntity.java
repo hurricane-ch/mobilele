@@ -11,8 +11,9 @@ import org.softuni.mobilele.model.enums.UserRoleEnum;
 @Entity
 @Getter
 @Setter
-@Table(name = "user_roles")
+@Table(name = "roles")
 public class UserRoleEntity extends BaseEntity {
+
     @Enumerated(EnumType.STRING)
     private UserRoleEnum role;
 

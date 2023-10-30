@@ -2,8 +2,8 @@ spring:
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/mobilele?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: niki
-    password: 123456
+    username: ${POSTGRE_USER}
+    password: ${POSTGRE_PASS}
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -21,8 +21,8 @@ spring:
         enabled: true
 
 mobilele:
-  default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
-  remember.me.key: ${REMEMBER_ME_KEY:topsecret}
+  default.admin.pass: ${DEFAULT_ADMIN_PASS}
+  remember.me.key: ${REMEMBER_ME_KEY}
 
 
 logging:

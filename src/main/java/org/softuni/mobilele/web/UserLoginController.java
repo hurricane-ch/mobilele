@@ -2,10 +2,10 @@ package org.softuni.mobilele.web;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
-import org.softuni.mobilele.model.dto.UserLoginDTO;
-import org.softuni.mobilele.service.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,25 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class UserLoginController {
 
-    private final UserService userService;
-
-    @GetMapping("/login")
+    @GetMapping("/users/login")
     public String login() {
         return "auth-login";
     }
 
-    @GetMapping("/logout")
-    public String logout() {
+    @PostMapping("/users/login-error")
+    public String onFailure(
+            @ModelAttribute("email") String email,
+            Model model) {
 
-        userService.logoutUser();
+        model.addAttribute("email", email);
+        model.addAttribute("bad_credentials", "true");
 
-        return "index";
-    }
-
-    @PostMapping("/login")
-    public String login(UserLoginDTO userLoginDTO) {
-        boolean loginSuccessful = userService.loginUser(userLoginDTO);
-
-        return loginSuccessful ? "index" : "auth-login";
+        return "auth-login";
     }
 }
