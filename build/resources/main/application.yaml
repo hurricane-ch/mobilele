@@ -21,8 +21,9 @@ spring:
         enabled: true
 
 mobilele:
-  default.admin.pass: ${DEFAULT_ADMIN_PASS}
-  remember.me.key: ${REMEMBER_ME_KEY}
+  default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
+  remember.me.key: ${REMEBER_ME_KEY:topsecret}
+
 
 
 logging:
@@ -36,4 +37,4 @@ open.exchange.rates:
   path: /api/latest.json
   app_id: ${APP_ID:test}
   symbols: EUR,BGN
-  enabled: true
+  enabled: false

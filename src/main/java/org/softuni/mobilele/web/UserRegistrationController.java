@@ -19,45 +19,29 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.UUID;
 
-@Controller
 @RequestMapping("/users")
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+@Controller
 public class UserRegistrationController {
-
-    private static final String BINDING_RESULT_PATH = "org.springframework.validation.BindingResult.";
     private final UserService userService;
+
+    public UserRegistrationController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/register")
     public String register() {
         return "auth-register";
     }
 
-//    @PostMapping("/register")
-//    public String register(@Valid UserRegistrationDTO UserRegistrationDTO) {
-//
-//        // TODO: Registration email with activation link
-//
-//        userService.registerUser(userRegistrationDTO);
-//
-//        return "redirect:/";
-//    }
-
     @PostMapping("/register")
-    public String postRegister(
-            @Valid UserRegistrationDTO userRegistrationDTO,
-            BindingResult bindingResult,
-            RedirectAttributes redirectAttributes) {
+    public String register(UserRegistrationDTO userRegistrationDTO) {
 
-        if (bindingResult.hasErrors()) {
-            redirectAttributes
-                    .addFlashAttribute("userRegistrationDTO", userRegistrationDTO)
-                    .addFlashAttribute(BINDING_RESULT_PATH + "userRegisterForm", bindingResult);
-
-            return "redirect:/users/register";
-        }
+        // TODO: Registration email with activation link
 
         userService.registerUser(userRegistrationDTO);
 
-        return "redirect:/users/login";
+        return "redirect:/";
     }
+
+
 }

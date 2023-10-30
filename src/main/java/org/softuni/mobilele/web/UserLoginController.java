@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/users")
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class UserLoginController {
 
     @GetMapping("/users/login")
