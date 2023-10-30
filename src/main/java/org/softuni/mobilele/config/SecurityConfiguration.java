@@ -1,6 +1,5 @@
 package org.softuni.mobilele.config;
 
-import lombok.RequiredArgsConstructor;
 import org.softuni.mobilele.model.enums.UserRoleEnum;
 import org.softuni.mobilele.repository.UserRepository;
 import org.softuni.mobilele.service.MobileleUserDetailsService;
