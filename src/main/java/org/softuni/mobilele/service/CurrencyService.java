@@ -4,9 +4,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.softuni.mobilele.model.dto.ConvertRequestDTO;
 import org.softuni.mobilele.model.dto.ExchangeRatesDTO;
+import org.softuni.mobilele.model.dto.MoneyDTO;
 import org.softuni.mobilele.model.entity.ExchangeRateEntity;
 import org.softuni.mobilele.repository.ExchangeRateRepository;
+import org.softuni.mobilele.service.exception.ObjectNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -97,5 +100,17 @@ public class CurrencyService {
         }
 
         return Optional.empty();
+    }
+    public MoneyDTO convert(ConvertRequestDTO convertRequestDTO) {
+        ExchangeRateEntity exchangeRateEntity = exchangeRateRepository
+                .findByCurrency(convertRequestDTO.target())
+                .orElseThrow(() -> new ObjectNotFoundException(
+                        "Convertion to target " +
+                                convertRequestDTO.target() + " not possible!"));
+
+        return new MoneyDTO(
+                convertRequestDTO.target(),
+                exchangeRateEntity.getRate().multiply(convertRequestDTO.amount())
+        );
     }
 }
