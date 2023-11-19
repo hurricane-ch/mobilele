@@ -28,10 +28,10 @@ VALUES
     ('CAR', 2, 'Fiesta'),
     ('CAR', 3, '601');
 
-INSERT INTO offers (description, engine, image_url, mileage, price, transmission, uuid, year, model_id)
+INSERT INTO offers (description, engine, image_url, mileage, price, transmission, uuid, year, model_id, seller_id)
 VALUES
-    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2223, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db7c', 1985, 5),
-    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2225, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db71', 1986, 5),
-    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2227, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db72', 1987, 5),
-    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2221, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db73', 1988, 5),
-    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2220, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db74', 1989, 5);
+    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2223, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db7c', 1985, 5,1),
+    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2225, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db71', 1986, 5,2),
+    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2227, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db72', 1987, 5,2),
+    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2221, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db73', 1988, 5,2),
+    ('Top Trabi!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2220, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db74', 1989, 5,2);

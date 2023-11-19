@@ -60,4 +60,6 @@ public class OfferEntity extends BaseEntity {
     @Column
     @Min(1950)
     private Integer year;
+    @ManyToOne
+    private UserEntity seller;
 }
