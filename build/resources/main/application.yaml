@@ -14,7 +14,7 @@ spring:
     defer-datasource-initialization: true
   sql:
     init:
-      mode: always
+      mode: never
   mvc:
     hiddenmethod:
       filter:
@@ -35,7 +35,7 @@ open.exchange.rates:
   path: /api/latest.json
   app_id: ${APP_ID:test}
   symbols: EUR,BGN
-  enabled: true
+  enabled: false
 
 mail:
   mobilele: "mobilele@example.com"

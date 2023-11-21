@@ -1,131 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.softuni.mobilele.impl.CurrencyServiceTestIT" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-11-11T18:36:53" hostname="mint" time="0.211">
+<testsuite name="org.softuni.mobilele.impl.CurrencyServiceTestIT" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-11-21T13:45:19" hostname="mint" time="0.15">
   <properties/>
-  <testcase name="Conversion BGN/EUR exRateBGN 1.840515, exRateEUR 0.937668, expected 0.51" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.132"/>
-  <testcase name="Conversion BGN/EUR exRateBGN 1.777515, exRateEUR 0.544454, expected 0.31" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.012"/>
-  <testcase name="Conversion BGN/EUR exRateBGN 1.0, exRateEUR 1.0, expected 1.0" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.015"/>
+  <testcase name="Conversion BGN/EUR exRateBGN 1.840515, exRateEUR 0.937668, expected 0.51" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.076"/>
+  <testcase name="Conversion BGN/EUR exRateBGN 1.777515, exRateEUR 0.544454, expected 0.31" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.014"/>
+  <testcase name="Conversion BGN/EUR exRateBGN 1.0, exRateEUR 1.0, expected 1.0" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.012"/>
   <testcase name="Conversion BGN/USD exRate 1.840515, expected 0.54" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.011"/>
-  <testcase name="Conversion BGN/USD exRate 1.752345, expected 0.57" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.012"/>
+  <testcase name="Conversion BGN/USD exRate 1.752345, expected 0.57" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.008"/>
   <testcase name="Conversion BGN/USD exRate 1.333333, expected 0.75" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.011"/>
-  <testcase name="Conversion BGN/USD exRate 1.0, expected 1.0" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.01"/>
-  <system-out><![CDATA[2023-11-11T20:36:53.268+02:00  INFO 55132 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.softuni.mobilele.impl.CurrencyServiceTestIT]: CurrencyServiceTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-11-11T20:36:53.272+02:00  INFO 55132 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.softuni.mobilele.MobileleApplication for test class org.softuni.mobilele.impl.CurrencyServiceTestIT
-2023-11-11T20:36:53.330+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.343+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.840515, EUR=0.937668}]
-2023-11-11T20:36:53.352+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.353+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.378+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.380+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.543]
-2023-11-11T20:36:53.380+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.382+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.382+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.383+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.383+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.509]
-2023-11-11T20:36:53.383+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.383+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.403+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.404+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.411+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.415+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.416+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.417+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.417+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.422+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.423+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.777515, EUR=0.544454}]
-2023-11-11T20:36:53.424+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.424+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.424+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.425+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.562]
-2023-11-11T20:36:53.425+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.425+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.425+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.426+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.426+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.306]
-2023-11-11T20:36:53.426+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.426+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.428+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.428+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.430+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.431+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.431+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.431+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.431+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.435+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.436+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.0, EUR=1.0}]
-2023-11-11T20:36:53.436+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.437+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.437+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.437+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [1.000]
-2023-11-11T20:36:53.437+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.438+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.438+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.438+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.439+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [1.000]
-2023-11-11T20:36:53.439+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.440+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.441+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.441+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.444+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.446+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.446+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:53.446+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.446+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.452+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.453+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.840515}]
-2023-11-11T20:36:53.454+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.454+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.455+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.455+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.543]
-2023-11-11T20:36:53.455+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.455+02:00 ERROR 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
-2023-11-11T20:36:53.455+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.456+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.456+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.459+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.460+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.460+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.465+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.466+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.752345}]
-2023-11-11T20:36:53.466+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.467+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.467+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.467+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.570]
-2023-11-11T20:36:53.467+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.468+02:00 ERROR 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
-2023-11-11T20:36:53.468+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.469+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.470+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.471+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.472+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.472+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.477+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.478+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.333333}]
-2023-11-11T20:36:53.478+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.479+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.479+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.480+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.750]
-2023-11-11T20:36:53.480+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.480+02:00 ERROR 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
-2023-11-11T20:36:53.480+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.481+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.483+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.484+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.485+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.485+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.490+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.491+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.0}]
-2023-11-11T20:36:53.492+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.492+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.493+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:53.493+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [1.000]
-2023-11-11T20:36:53.493+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.493+02:00 ERROR 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
-2023-11-11T20:36:53.493+02:00  INFO 55132 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
-2023-11-11T20:36:53.494+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:53.495+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
-2023-11-11T20:36:53.496+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
-2023-11-11T20:36:53.497+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
-2023-11-11T20:36:53.497+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+  <testcase name="Conversion BGN/USD exRate 1.0, expected 1.0" classname="org.softuni.mobilele.impl.CurrencyServiceTestIT" time="0.011"/>
+  <system-out><![CDATA[2023-11-21T15:45:19.264+02:00  INFO 39359 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.softuni.mobilele.impl.CurrencyServiceTestIT]: CurrencyServiceTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-11-21T15:45:19.268+02:00  INFO 39359 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.softuni.mobilele.MobileleApplication for test class org.softuni.mobilele.impl.CurrencyServiceTestIT
+2023-11-21T15:45:19.316+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.323+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={EUR=0.937668, BGN=1.840515}]
+2023-11-21T15:45:19.329+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.329+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.338+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.338+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.543]
+2023-11-21T15:45:19.338+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.339+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.339+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.340+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.340+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.509]
+2023-11-21T15:45:19.340+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.340+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.359+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.360+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.366+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.370+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.370+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.371+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.371+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.376+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.377+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={EUR=0.544454, BGN=1.777515}]
+2023-11-21T15:45:19.377+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.378+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.378+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.379+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.562]
+2023-11-21T15:45:19.379+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.380+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.380+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.381+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.382+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.306]
+2023-11-21T15:45:19.382+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.382+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.383+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.384+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.386+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.387+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.387+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.387+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.387+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.392+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.393+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={EUR=1.0, BGN=1.0}]
+2023-11-21T15:45:19.393+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.394+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.394+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.394+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [1.000]
+2023-11-21T15:45:19.395+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.395+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.395+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.396+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.396+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [1.000]
+2023-11-21T15:45:19.396+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.397+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.398+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.398+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.400+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.401+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.401+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.401+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.401+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.406+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.407+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.840515}]
+2023-11-21T15:45:19.408+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.408+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.409+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.409+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.543]
+2023-11-21T15:45:19.409+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.409+02:00 ERROR 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
+2023-11-21T15:45:19.409+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.410+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.410+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.412+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.413+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.413+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.418+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.419+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.752345}]
+2023-11-21T15:45:19.419+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.420+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.420+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.420+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.570]
+2023-11-21T15:45:19.420+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.421+02:00 ERROR 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
+2023-11-21T15:45:19.421+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.421+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.422+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.423+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.423+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.423+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.427+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.428+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.333333}]
+2023-11-21T15:45:19.428+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.429+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.429+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.429+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.750]
+2023-11-21T15:45:19.429+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.430+02:00 ERROR 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
+2023-11-21T15:45:19.430+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.431+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.432+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.433+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.434+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.434+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.439+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.440+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Exchange rates received ExchangeRatesDTO[base=USD, rates={BGN=1.0}]
+2023-11-21T15:45:19.441+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.441+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.442+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:19.442+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [1.000]
+2023-11-21T15:45:19.442+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.442+02:00 ERROR 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Unable to get exchange rate for BGN TO EUR
+2023-11-21T15:45:19.442+02:00  INFO 39359 --- [    Test worker] o.s.mobilele.service.CurrencyService     : Rates refreshed...
+2023-11-21T15:45:19.443+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:19.443+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
+2023-11-21T15:45:19.444+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0
+2023-11-21T15:45:19.445+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : delete from exchange_rates where currency=?
+2023-11-21T15:45:19.445+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USD]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

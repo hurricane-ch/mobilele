@@ -1,6 +1,7 @@
 package org.softuni.mobilele.web;
 
 import org.junit.jupiter.api.Test;
+import org.softuni.mobilele.MobileleApplication;
 import org.softuni.mobilele.testutils.TestDataUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

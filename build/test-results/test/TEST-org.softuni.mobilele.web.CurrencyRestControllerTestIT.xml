@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.softuni.mobilele.web.CurrencyRestControllerTestIT" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-11T18:36:54" hostname="mint" time="0.196">
+<testsuite name="org.softuni.mobilele.web.CurrencyRestControllerTestIT" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-21T13:45:21" hostname="mint" time="0.208">
   <properties/>
-  <testcase name="testConvert()" classname="org.softuni.mobilele.web.CurrencyRestControllerTestIT" time="0.196"/>
-  <system-out><![CDATA[2023-11-11T20:36:53.746+02:00  INFO 55132 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.softuni.mobilele.web.CurrencyRestControllerTestIT]: CurrencyRestControllerTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-11-11T20:36:53.782+02:00  INFO 55132 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.softuni.mobilele.MobileleApplication for test class org.softuni.mobilele.web.CurrencyRestControllerTestIT
+  <testcase name="testConvert()" classname="org.softuni.mobilele.web.CurrencyRestControllerTestIT" time="0.208"/>
+  <system-out><![CDATA[2023-11-21T15:45:19.697+02:00  INFO 39359 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.softuni.mobilele.web.CurrencyRestControllerTestIT]: CurrencyRestControllerTestIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-11-21T15:45:19.726+02:00  INFO 39359 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.softuni.mobilele.MobileleApplication for test class org.softuni.mobilele.web.CurrencyRestControllerTestIT
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,55 +13,62 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.3)
 
-2023-11-11T20:36:53.819+02:00  INFO 55132 --- [    Test worker] o.s.m.web.CurrencyRestControllerTestIT   : Starting CurrencyRestControllerTestIT using Java 17.0.9 with PID 55132 (started by niki in /home/niki/IdeaProjects/mobilele)
-2023-11-11T20:36:53.819+02:00  INFO 55132 --- [    Test worker] o.s.m.web.CurrencyRestControllerTestIT   : No active profile set, falling back to 1 default profile: "default"
-2023-11-11T20:36:54.033+02:00  INFO 55132 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-11T20:36:54.048+02:00  INFO 55132 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
-2023-11-11T20:36:54.206+02:00  INFO 55132 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-11T20:36:54.213+02:00  INFO 55132 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-11-11T20:36:54.214+02:00  INFO 55132 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-11T20:36:54.215+02:00  INFO 55132 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-11-11T20:36:54.253+02:00  INFO 55132 --- [    Test worker] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (feature not supported)
-2023-11-11T20:36:54.254+02:00  INFO 55132 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.hsqldb.jdbc.JDBCConnection@337fac72
-2023-11-11T20:36:54.254+02:00  INFO 55132 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-11-11T20:36:54.289+02:00  INFO 55132 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-11-11T20:36:54.398+02:00  INFO 55132 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-11T20:36:54.399+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists brands cascade 
-2023-11-11T20:36:54.399+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists exchange_rates cascade 
-2023-11-11T20:36:54.399+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists models cascade 
-2023-11-11T20:36:54.399+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists offers cascade 
-2023-11-11T20:36:54.399+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists roles cascade 
-2023-11-11T20:36:54.399+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists user_activation_codes cascade 
-2023-11-11T20:36:54.400+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists users cascade 
-2023-11-11T20:36:54.400+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : drop table if exists users_roles cascade 
-2023-11-11T20:36:54.401+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table brands (id bigint generated by default as identity (start with 1), name varchar(255) not null unique, primary key (id))
-2023-11-11T20:36:54.405+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table exchange_rates (rate numeric(38,2) not null, currency varchar(255) not null, primary key (currency))
-2023-11-11T20:36:54.406+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table models (brand_id bigint, id bigint generated by default as identity (start with 1), category varchar(255) check (category in ('CAR','TRUCK','MOTORCYCLE')), name varchar(255), primary key (id))
-2023-11-11T20:36:54.407+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table offers (mileage integer, price numeric(38,2) not null, year integer check (year>=1950), id bigint generated by default as identity (start with 1), model_id bigint not null, uuid varchar(36) not null, description varchar(255), engine varchar(255) check (engine in ('PETROL','DIESEL','ELECTRIC')), image_url varchar(255), transmission varchar(255) check (transmission in ('MANUAL','AUTOMATIC')), primary key (id))
-2023-11-11T20:36:54.408+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table roles (id bigint generated by default as identity (start with 1), role varchar(255) check (role in ('ADMIN','USER')), primary key (id))
-2023-11-11T20:36:54.410+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table user_activation_codes (created timestamp(6), id bigint generated by default as identity (start with 1), user_id bigint, activation_code varchar(255), primary key (id))
-2023-11-11T20:36:54.411+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table users (active boolean, id bigint generated by default as identity (start with 1), email varchar(255) unique, first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id))
-2023-11-11T20:36:54.411+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : create table users_roles (role_id bigint not null, user_id bigint not null)
-2023-11-11T20:36:54.412+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : alter table models add constraint FK95s72g5hnsl3o0bqeuhnokdxu foreign key (brand_id) references brands
-2023-11-11T20:36:54.412+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : alter table offers add constraint FK3dbbkoli06hqmi3e8qidufetr foreign key (model_id) references models
-2023-11-11T20:36:54.413+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : alter table user_activation_codes add constraint FKfbg5il4hu0btsov78l7p2jxpy foreign key (user_id) references users
-2023-11-11T20:36:54.414+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : alter table users_roles add constraint FKj6m8fwv7oqv74fcehir1a9ffy foreign key (role_id) references roles
-2023-11-11T20:36:54.415+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : alter table users_roles add constraint FK2o0jvgh89lemvvo17cbqvdxaa foreign key (user_id) references users
-2023-11-11T20:36:54.416+02:00  INFO 55132 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-11T20:36:54.678+02:00  WARN 55132 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-11T20:36:54.711+02:00  INFO 55132 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76300346, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@153f6a67, org.springframework.security.web.context.SecurityContextHolderFilter@5f19da2c, org.springframework.security.web.header.HeaderWriterFilter@129204bf, org.springframework.security.web.csrf.CsrfFilter@5e1fc897, org.springframework.security.web.authentication.logout.LogoutFilter@618cfd1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46110b82, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f62fa28, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15f4f652, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6b732d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b3c2e59, org.springframework.security.web.access.ExceptionTranslationFilter@73c337e9, org.springframework.security.web.access.intercept.AuthorizationFilter@5cb7eb6c]
-2023-11-11T20:36:54.779+02:00  INFO 55132 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-11-11T20:36:54.875+02:00  INFO 55132 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-11-11T20:36:54.875+02:00  INFO 55132 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-11T20:36:54.877+02:00  INFO 55132 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-11-11T20:36:54.888+02:00  INFO 55132 --- [    Test worker] o.s.m.web.CurrencyRestControllerTestIT   : Started CurrencyRestControllerTestIT in 1.101 seconds (process running for 5.183)
-2023-11-11T20:36:54.901+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:54.902+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
-2023-11-11T20:36:54.904+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
-2023-11-11T20:36:54.905+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.54]
-2023-11-11T20:36:54.905+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
-2023-11-11T20:36:55.001+02:00 DEBUG 55132 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
-2023-11-11T20:36:55.001+02:00 TRACE 55132 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:19.764+02:00  INFO 39359 --- [    Test worker] o.s.m.web.CurrencyRestControllerTestIT   : Starting CurrencyRestControllerTestIT using Java 17.0.9 with PID 39359 (started by niki in /home/niki/IdeaProjects/mobilele)
+2023-11-21T15:45:19.765+02:00  INFO 39359 --- [    Test worker] o.s.m.web.CurrencyRestControllerTestIT   : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T15:45:20.110+02:00  INFO 39359 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T15:45:20.131+02:00  INFO 39359 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 7 JPA repository interfaces.
+2023-11-21T15:45:20.301+02:00  INFO 39359 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T15:45:20.309+02:00  INFO 39359 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-21T15:45:20.310+02:00  INFO 39359 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-21T15:45:20.311+02:00  INFO 39359 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-11-21T15:45:20.342+02:00  INFO 39359 --- [    Test worker] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (feature not supported)
+2023-11-21T15:45:20.343+02:00  INFO 39359 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.hsqldb.jdbc.JDBCConnection@269c07d
+2023-11-21T15:45:20.343+02:00  INFO 39359 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-11-21T15:45:20.373+02:00  INFO 39359 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-21T15:45:20.481+02:00  INFO 39359 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T15:45:20.482+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists brands cascade 
+2023-11-21T15:45:20.483+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists exchange_rates cascade 
+2023-11-21T15:45:20.483+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists models cascade 
+2023-11-21T15:45:20.483+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists offers cascade 
+2023-11-21T15:45:20.484+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists roles cascade 
+2023-11-21T15:45:20.484+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists user_activation_codes cascade 
+2023-11-21T15:45:20.484+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists users cascade 
+2023-11-21T15:45:20.484+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : drop table if exists users_roles cascade 
+2023-11-21T15:45:20.485+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table brands (id bigint generated by default as identity (start with 1), name varchar(255) not null unique, primary key (id))
+2023-11-21T15:45:20.486+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table exchange_rates (rate numeric(38,2) not null, currency varchar(255) not null, primary key (currency))
+2023-11-21T15:45:20.487+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table models (brand_id bigint, id bigint generated by default as identity (start with 1), category varchar(255) check (category in ('CAR','TRUCK','MOTORCYCLE')), name varchar(255), primary key (id))
+2023-11-21T15:45:20.489+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table offers (mileage integer, price numeric(38,2) not null, year integer check (year>=1950), id bigint generated by default as identity (start with 1), model_id bigint not null, seller_id bigint, uuid varchar(36) not null, description varchar(255), engine varchar(255) check (engine in ('PETROL','DIESEL','ELECTRIC')), image_url varchar(255), transmission varchar(255) check (transmission in ('MANUAL','AUTOMATIC')), primary key (id))
+2023-11-21T15:45:20.491+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table roles (id bigint generated by default as identity (start with 1), role varchar(255) check (role in ('ADMIN','USER')), primary key (id))
+2023-11-21T15:45:20.492+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table user_activation_codes (created timestamp(6), id bigint generated by default as identity (start with 1), user_id bigint, activation_code varchar(255), primary key (id))
+2023-11-21T15:45:20.493+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table users (active boolean, id bigint generated by default as identity (start with 1), email varchar(255) unique, first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id))
+2023-11-21T15:45:20.493+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : create table users_roles (role_id bigint not null, user_id bigint not null)
+2023-11-21T15:45:20.494+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : alter table models add constraint FK95s72g5hnsl3o0bqeuhnokdxu foreign key (brand_id) references brands
+2023-11-21T15:45:20.495+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : alter table offers add constraint FK3dbbkoli06hqmi3e8qidufetr foreign key (model_id) references models
+2023-11-21T15:45:20.496+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : alter table offers add constraint FK64dv88mu37r6tcmd4cgu5sve foreign key (seller_id) references users
+2023-11-21T15:45:20.498+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : alter table user_activation_codes add constraint FKfbg5il4hu0btsov78l7p2jxpy foreign key (user_id) references users
+2023-11-21T15:45:20.499+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : alter table users_roles add constraint FKj6m8fwv7oqv74fcehir1a9ffy foreign key (role_id) references roles
+2023-11-21T15:45:20.500+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : alter table users_roles add constraint FK2o0jvgh89lemvvo17cbqvdxaa foreign key (user_id) references users
+2023-11-21T15:45:20.501+02:00  INFO 39359 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T15:45:20.795+02:00  WARN 39359 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T15:45:20.814+02:00  INFO 39359 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72c9576a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b4bcd6e, org.springframework.security.web.context.SecurityContextHolderFilter@418b3215, org.springframework.security.web.header.HeaderWriterFilter@559c3710, org.springframework.security.web.csrf.CsrfFilter@6b3eb57, org.springframework.security.web.authentication.logout.LogoutFilter@357e6334, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a445b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58fb9020, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19ed779e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4785f176, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@861bc5f, org.springframework.security.web.access.ExceptionTranslationFilter@3a0f6b1a, org.springframework.security.web.access.intercept.AuthorizationFilter@43a34f02]
+2023-11-21T15:45:20.869+02:00  INFO 39359 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-11-21T15:45:21.068+02:00  INFO 39359 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-11-21T15:45:21.069+02:00  INFO 39359 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-21T15:45:21.073+02:00  INFO 39359 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-21T15:45:21.086+02:00  INFO 39359 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 17 ms
+2023-11-21T15:45:21.187+02:00  INFO 39359 --- [    Test worker] o.s.m.web.CurrencyRestControllerTestIT   : Started CurrencyRestControllerTestIT in 1.454 seconds (process running for 6.659)
+2023-11-21T15:45:21.191+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select count(*) from roles u1_0
+2023-11-21T15:45:21.193+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into roles (role,id) values (?,default)
+2023-11-21T15:45:21.193+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [USER]
+2023-11-21T15:45:21.195+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into roles (role,id) values (?,default)
+2023-11-21T15:45:21.196+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [ADMIN]
+2023-11-21T15:45:21.204+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:21.205+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
+2023-11-21T15:45:21.206+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : insert into exchange_rates (rate,currency) values (?,?)
+2023-11-21T15:45:21.206+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [NUMERIC] - [0.54]
+2023-11-21T15:45:21.206+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [2] as [VARCHAR] - [EUR]
+2023-11-21T15:45:21.292+02:00 DEBUG 39359 --- [    Test worker] org.hibernate.SQL                        : select e1_0.currency,e1_0.rate from exchange_rates e1_0 where e1_0.currency=?
+2023-11-21T15:45:21.293+02:00 TRACE 39359 --- [    Test worker] org.hibernate.orm.jdbc.bind              : binding parameter [1] as [VARCHAR] - [EUR]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
